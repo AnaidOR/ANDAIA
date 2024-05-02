@@ -13,7 +13,6 @@ from models.entities.User import User
 app=Flask(__name__)
 #conexion 
 db=MySQL(app)
-login_manager_app =LoginManager()
 
 @app.route('/')
 def index():
@@ -22,13 +21,12 @@ def index():
 @app.route('/login', methods=['GET','POST'])
 def login():
     if request.method=='POST':
-        #print(request.form ['username'])
-        #print(request.form['password'])
+        print(request.form ['username'])
+        print(request.form['password'])
         user = User(0,request.form['username'],request.form['password'])
         logged_user=ModelUser.login(db,user)
         if logged_user != None:
             if logged_user.password:
-                login_user(logged_user)
                 return redirect(url_for('home')) 
             else:
                 flash ("Contraseña invalida...")
