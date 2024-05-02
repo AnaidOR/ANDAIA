@@ -1,7 +1,8 @@
-class config:
+class Config:
     SECRET_KEY ='123'
 
-class DevelopmentConfig(config):
+#Conexion  a base de datos 
+class DevelopmentConfig(Config):
     
     DEBUG = True
     MYSQL_HOST ='localhost'

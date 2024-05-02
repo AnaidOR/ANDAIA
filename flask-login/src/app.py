@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for,flash
 from config import config
+from flask_login import LoginManager, login_user, logout_user,login_required
+
 from flask_mysqldb import MySQL
 
 #Models
@@ -9,8 +11,9 @@ from models.ModelUser import ModelUser
 from models.entities.User import User
 
 app=Flask(__name__)
-
+#conexion 
 db=MySQL(app)
+login_manager_app =LoginManager()
 
 @app.route('/')
 def index():
@@ -25,6 +28,7 @@ def login():
         logged_user=ModelUser.login(db,user)
         if logged_user != None:
             if logged_user.password:
+                login_user(logged_user)
                 return redirect(url_for('home')) 
             else:
                 flash ("Contraseña invalida...")
