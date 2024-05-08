@@ -11,7 +11,7 @@ from models.ModelUser import ModelUser
 from models.entities.User import User
 
 from products import products
-
+import json
 
 
 app=Flask(__name__)
@@ -50,7 +50,7 @@ def login2():
     logged_user=ModelUser.login(db,user)
     if logged_user != None:
         if logged_user.password:
-                return jsonify({"usuario":user}) 
+                return jsonify({"usuario": {"username": body['username']}}) 
         else:
             return jsonify ({"error": "contraseña invalida"})
     else: 
