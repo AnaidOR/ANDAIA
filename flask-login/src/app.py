@@ -42,6 +42,22 @@ def login():
     else:
         return render_template('auth/login.html')
 
+@app.route('/login2', methods = ['POST'])
+def login2():
+    body = request.get_json()
+    #print (body)
+    user = User(0,body['username'],body['password'])
+    logged_user=ModelUser.login(db,user)
+    if logged_user != None:
+        if logged_user.password:
+                return jsonify({"usuario":user}) 
+        else:
+            return jsonify ({"error": "contraseña invalida"})
+    else: 
+        flash("Usuario no encontrado... ")
+        return jsonify ({"error": "usuario no encontrado"})
+    return jsonify({"estatus":200})
+
 @app.route('/home')
 def home():
     return render_template('home.html')
