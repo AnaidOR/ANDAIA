@@ -1,7 +1,7 @@
-from flask import Flask, jsonify,render_template, request, redirect, url_for,flash
+from flask import Flask, jsonify,render_template, request, redirect, url_for,flash,json
 from config import config
 from flask_login import LoginManager, login_user, logout_user,login_required
-
+from flask_cors import CORS
 from flask_mysqldb import MySQL
 
 #Models
@@ -11,10 +11,10 @@ from models.ModelUser import ModelUser
 from models.entities.User import User
 
 from products import products
-import json
 
 
 app=Flask(__name__)
+CORS(app)
 #conexion 
 db=MySQL(app)
 
