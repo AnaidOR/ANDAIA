@@ -1,6 +1,31 @@
 ### 
 POST http://localhost:8080/api/users HTTP/1.1
-
 Content-Type: application/json
 
-{} 
+{
+    "nombre": "Daniela NAva",
+    "edad": "20",
+    "email": "daniela@gmail.com"
+} 
+
+###
+
+GET http://localhost:8080/api/users HTTP/1.1
+
+###
+
+GET http://localhost:8080/api/users/6645268913b89619d0455daf HTTP/1.1
+
+### 
+PUT  http://localhost:8080/api/users/664526c113b89619d0455db2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Daniela Nava",
+    "edad": "20",
+    "email": "daniela@gmail.com"
+} 
+
+###
+
+DELETE  http://localhost:8080/api/users/6645268913b89619d0455daf HTTP/1.1
