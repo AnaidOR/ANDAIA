@@ -62,3 +62,37 @@ Content-Type: application/json
 ###
 
 DELETE http://localhost:8080/api/usuarios/664526c113b89619d0455db2 HTTP/1.1
+
+//}Ordenes 
+### 
+POST http://localhost:8080/api/ordenes HTTP/1.1
+Content-Type: application/json
+
+{
+    "orden": "1",
+    "nombre": "Anaid Olguin",
+    "descripcion": "aPantalosn azul asjjsj",
+    "total": "5000",
+    "direccion": "Rosal "
+
+}
+
+###
+
+GET http://localhost:8080/api/productos HTTP/1.1
+
+###
+
+GET http://localhost:8080/api/usuarios/6645268913b89619d0455daf HTTP/1.1
+
+### 
+PUT  http://localhost:8080/api/usuarios/664526c113b89619d0455db2 HTTP/1.1
+Content-Type: application/json
+
+{
+
+} 
+
+###
+
+DELETE http://localhost:8080/api/usuarios/664526c113b89619d0455db2 HTTP/1.1
