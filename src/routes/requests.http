@@ -1,23 +1,23 @@
 ### 
-POST http://localhost:8080/api/users HTTP/1.1
+POST http://localhost:8080/api/usuarios HTTP/1.1
 Content-Type: application/json
 
 {
-    "nombre": "Daniela NAva",
+    "nombre": "Anaid Olguin",
     "edad": "20",
-    "email": "daniela@gmail.com"
+    "email": "la@gmail.com"
 } 
 
 ###
 
-GET http://localhost:8080/api/users HTTP/1.1
+GET http://localhost:8080/api/usuarios HTTP/1.1
 
 ###
 
-GET http://localhost:8080/api/users/6645268913b89619d0455daf HTTP/1.1
+GET http://localhost:8080/api/usuarios/6645268913b89619d0455daf HTTP/1.1
 
 ### 
-PUT  http://localhost:8080/api/users/664526c113b89619d0455db2 HTTP/1.1
+PUT  http://localhost:8080/api/usuarios/664526c113b89619d0455db2 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -28,7 +28,7 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:8080/api/users/664526c113b89619d0455db2 HTTP/1.1
+DELETE http://localhost:8080/api/usuarios/664526c113b89619d0455db2 HTTP/1.1
 
 //Productoos 
 ### 
@@ -49,10 +49,10 @@ GET http://localhost:8080/api/productos HTTP/1.1
 
 ###
 
-GET http://localhost:8080/api/users/6645268913b89619d0455daf HTTP/1.1
+GET http://localhost:8080/api/usuarios/6645268913b89619d0455daf HTTP/1.1
 
 ### 
-PUT  http://localhost:8080/api/users/664526c113b89619d0455db2 HTTP/1.1
+PUT  http://localhost:8080/api/usuarios/664526c113b89619d0455db2 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -61,4 +61,4 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:8080/api/users/664526c113b89619d0455db2 HTTP/1.1
+DELETE http://localhost:8080/api/usuarios/664526c113b89619d0455db2 HTTP/1.1
