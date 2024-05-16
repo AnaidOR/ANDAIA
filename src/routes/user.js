@@ -42,7 +42,7 @@ router.put("/users/:id",(req, res) => {
 
 //borrar un usuario en especifico
 router.delete("/users/:id",(req, res) => {
-    const { id } =  req.params;
+    const { id } = req.params;
     userSchema
         .remove({ _id: id})
         .then((data) => res.json(data))
