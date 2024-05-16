@@ -1,49 +1,49 @@
 const express = require("express");
-const userSchema = require("../models/user");
+const productosSchema = require("../models/productos");
 
 
 const router = express.Router();
 
 //crear usuario
-router.post("/users",(req, res) => {
-    const user = userSchema(req.body);
-    user.save()
+router.post("/productos",(req, res) => {
+    const productos = productosSchema(req.body);
+    productos.save()
         .then((data) => res.json(data))
         .catch((error) => res.json({message:error}));
 });
 
 
 //obtener todos los usuarios
-router.get("/users",(req, res) => {
-    userSchema
+router.get("/productos",(req, res) => {
+    productosSchema
         .find()
         .then((data) => res.json(data))
         .catch((error) => res.json({message:error}));
 });
 
 //obtener un usuario en especifico
-router.get("/users/:id",(req, res) => {
+router.get("/productos/:id",(req, res) => {
     const { id } =  req.params;
-    userSchema
+    productosSchema
         .findById(id)
         .then((data) => res.json(data))
         .catch((error) => res.json({message:error}));
 });
 
 //actualizar un usuario en especifico
-router.put("/users/:id",(req, res) => {
+router.put("/productos/:id",(req, res) => {
     const { id } =  req.params;
-    const {nombre, edad, email} = req.body;
-    userSchema
-        .updateOne({ _id: id}, {$set: {nombre, edad, email}})
+    const {nombre, descripcion, precio, existencias} = req.body;
+    productosSchema
+        .updateOne({ _id: id}, {$set: {nombre,descripcion, precio, existencias}})
         .then((data) => res.json(data))
         .catch((error) => res.json({message:error}));
 });
 
 //borrar un usuario en especifico
-router.delete("/users/:id",(req, res) => {
+router.delete("/productos/:id",(req, res) => {
     const { id } = req.params;
-    userSchema
+    productosSchema
         .deleteOne({ _id: id })
         .then((data) => res.json(data))
         .catch((error) => res.json({message:error}));

@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require ('mongoose');
 require("dotenv").config();
 const userRoutes = require("./routes/user");
+const productosRoutes = require("./routes/productos");
 
 const app = express();
 const port = process.env.PORT  || 8080;
@@ -9,6 +10,7 @@ const port = process.env.PORT  || 8080;
 //middleware
 app.use(express.json());
 app.use('/api', userRoutes);
+app.use('/api', productosRoutes);
 
 
 
@@ -23,4 +25,4 @@ mongoose
 .then(() => console.log('Conectado a Aatlas'))
 .catch((error) => console.error(error))
 
-app.listen(8080, () => console.log('servidor en purto ', port))
+app.listen(8080, () => console.log('Servidor en puerto:', port))
