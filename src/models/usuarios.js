@@ -12,6 +12,10 @@ const usuarioSchema = mongoose.Schema({
     email: {
         type: String,
         required: true
+    },
+    contrasenia: {
+        type: String, 
+        required: true
     }
 });
 

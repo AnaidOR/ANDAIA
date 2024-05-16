@@ -5,7 +5,8 @@ Content-Type: application/json
 {
     "nombre": "Anaid Olguin",
     "edad": "20",
-    "email": "la@gmail.com"
+    "email": "la@gmail.com",
+    "contrasenia": "1234"
 } 
 
 ###
