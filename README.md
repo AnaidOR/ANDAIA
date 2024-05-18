@@ -5,6 +5,7 @@
 ### Requerimientos
 
 Instalar node 20 o mayor de [aqui](https://nodejs.org/en)
+
 Verificar instalacion abriendo la terminal y corriendo:
 
 ```
