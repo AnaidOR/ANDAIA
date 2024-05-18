@@ -2,8 +2,16 @@
 
 ## API
 
-Instalar node 20 o mayor
-Como correr el backend:
+### Requerimientos
+
+Instalar node 20 o mayor de [aqui](https://nodejs.org/en)
+Verificar instalacion abriendo la terminal y corriendo:
+
+```
+npm -v
+```
+
+### Como correr el backend:
 
 Abrir terminal e ir al directorio api
 
