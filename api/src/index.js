@@ -4,6 +4,7 @@ require("dotenv").config();
 const usuariosRoutes = require("./routes/usuarios");
 const productosRoutes = require("./routes/productos");
 const ordenesRoutes = require("./routes/ordenes");
+const loginRoutes = require("./routes/login");
 
 
 const app = express();
@@ -14,7 +15,7 @@ app.use(express.json());
 app.use('/api', usuariosRoutes);
 app.use('/api', productosRoutes);
 app.use('/api', ordenesRoutes);
-
+app.use('/api', loginRoutes);
 
 
 // routes
