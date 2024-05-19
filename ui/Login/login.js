@@ -21,7 +21,9 @@ async function sendRequest(e) {
     .then((data) => {
       console.log(data);
       if (data.contrasenia) {
+        localStorage.setItem("usuario", JSON.stringify(data));
         window.location.href = "../Pagina principal/index-paginaPrin.html";
+        //localStorage.getItem("usuario"); //JSON.parse(usuario)
       } else {
         console.error(e);
         alert(data.message);

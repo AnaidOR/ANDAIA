@@ -19,6 +19,7 @@ async function sendRequest(e) {
     .then((data) => {
       console.log(data);
       if (data) {
+        localStorage.setItem("usuario", JSON.stringify(data));
         window.location.href = "../Pagina principal/index-paginaPrin.html";
       } else {
         console.error(e);
