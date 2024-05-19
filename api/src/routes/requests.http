@@ -4,9 +4,11 @@ Content-Type: application/json
 
 {
     "nombre": "Anaid Olguin",
-    "edad": "20",
-    "email": "la@gmail.com",
-    "contrasenia": "1234"
+    "usuario": "AOlguin",
+    "email": "aniiop03@gmail.com",
+    "contrasenia": "Kumaolguin",
+    "pais": "México",
+    "telefono": "5555555555"
 } 
 
 ###
@@ -21,7 +23,7 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:8080/api/usuarios/6645268913b89619d0455daf HTTP/1.1
+GET http://localhost:8080/api/usuarios/ HTTP/1.1
 
 ### 
 PUT  http://localhost:8080/api/usuarios/664526c113b89619d0455db2 HTTP/1.1
