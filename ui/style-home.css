@@ -20,6 +20,10 @@ header {
     font-weight: bold;
 }
 
+h1{
+    text-align: center;
+}
+
 
 /* Estilo para el cuerpo centrado */
 main {
